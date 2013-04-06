@@ -11,7 +11,7 @@
 
 .fancy {
   -webkit-animation: fancy
-    25s infinite linear;
+    45s infinite linear;
   background-color: #00A1D9;
   background-image:
     linear-gradient(to right,
