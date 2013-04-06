@@ -1,0 +1,56 @@
+/**
+  Colours:
+    https://kuler.adobe.com/#themeID/2238023
+
+    #003056
+    #04518C
+    #00A1D9
+    #47D9BF
+    #F2D03B
+**/
+
+.fancy {
+  -webkit-animation: fancy
+    25s infinite linear;
+  background-color: #00A1D9;
+  background-image:
+    linear-gradient(to right,
+      transparent 0%,
+      #47D9BF 0%,
+      #47D9BF 12%,
+      transparent 12%),
+    linear-gradient(to right,
+      transparent 0%,
+      transparent 33%,
+      #F2D03B 33%,
+      #F2D03B 37%,
+      transparent 37%),
+    linear-gradient(to right,
+      transparent 0%,
+      transparent 37%,
+      #003056 37%,
+      #003056 67%,
+      transparent 67%),
+    linear-gradient(to right,
+      transparent 0%,
+      transparent 79%,
+      #04518C 79%,
+      #04518C 100%,
+      transparent 100%);
+}
+@-webkit-keyframes fancy {
+  50% {
+    background-position:
+      100vw 0,
+      -5vw 0,
+      100vw 0,
+      10vw 0;
+  }
+  0%, 100% {
+    background-position:
+      0% 0,
+      100vw 0,
+      50vw 0,
+      25vw 0;
+  }
+}
