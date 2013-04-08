@@ -15,8 +15,11 @@ header {
 	right: 0;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
 	text-align: right;
 	font-weight: bold;
+	color: #F2D03B;
 	background-color: #F2D03B !important;
 }
 header > h1,
