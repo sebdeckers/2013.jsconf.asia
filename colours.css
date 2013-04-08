@@ -12,6 +12,10 @@
 .fancy {
   -webkit-animation: fancy
     45s infinite linear;
+  -moz-animation: fancy
+    45s infinite linear;
+  animation: fancy
+    45s infinite linear;
   background-color: #00A1D9;
   background-image:
     linear-gradient(to right,
@@ -39,6 +43,38 @@
       transparent 100%);
 }
 @-webkit-keyframes fancy {
+  50% {
+    background-position:
+      100vw 0,
+      -5vw 0,
+      100vw 0,
+      10vw 0;
+  }
+  0%, 100% {
+    background-position:
+      0% 0,
+      100vw 0,
+      50vw 0,
+      25vw 0;
+  }
+}
+@-moz-keyframes fancy {
+  50% {
+    background-position:
+      100vw 0,
+      -5vw 0,
+      100vw 0,
+      10vw 0;
+  }
+  0%, 100% {
+    background-position:
+      0% 0,
+      100vw 0,
+      50vw 0,
+      25vw 0;
+  }
+}
+@keyframes fancy {
   50% {
     background-position:
       100vw 0,
