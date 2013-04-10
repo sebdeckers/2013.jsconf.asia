@@ -38,7 +38,8 @@ section {
   background-image: -ms-linear-gradient(top, #115890 0%, #56aaeb 60%);
   background-image: -o-linear-gradient(top, #115890 0%, #56aaeb 60%);
 }
-div.logo {
+.logo {
+  display: block;
   z-index: 8;
   width: 200px;
   height: 200px;
@@ -48,14 +49,14 @@ div.logo {
   position: relative;
   box-shadow: 0 10px 40px rgba(7,25,57,0.15);
 }
-div.logo:before {
+.logo:before {
   position: absolute;
   width: 200px;
   height: 200px;
   content: "";
   background-image: url("../img/js.svg");
 }
-div.reflection {
+.reflection {
 	z-index: 4;
 	margin: 130px -100px -330px;
     -webkit-transform: scaleY(-1); 
