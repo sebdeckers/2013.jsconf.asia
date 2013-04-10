@@ -1,45 +1,45 @@
 /**
   Colours:
-    https://kuler.adobe.com/#themeID/2238023
+    https://kuler.adobe.com/#themeID/52305
 
-    #003056
-    #04518C
-    #00A1D9
-    #47D9BF
-    #F2D03B
+    #021C7F
+    #256BC4
+    #56AAEB
+    #9AE0FF
+    #FFED2A
 **/
 
-.fancy {
+.logo {
   -webkit-animation: fancy
     45s infinite linear;
   -moz-animation: fancy
     45s infinite linear;
   animation: fancy
     45s infinite linear;
-  background-color: #00A1D9;
+  background-color: #256BC4;
   background-image:
     linear-gradient(to right,
       transparent 0%,
-      #47D9BF 0%,
-      #47D9BF 12%,
+      #56AAEB 0%,
+      #56AAEB 12%,
       transparent 12%),
     linear-gradient(to right,
       transparent 0%,
       transparent 33%,
-      #F2D03B 33%,
-      #F2D03B 37%,
+      #9AE0FF 20%,
+      #9AE0FF 37%,
       transparent 37%),
     linear-gradient(to right,
       transparent 0%,
       transparent 37%,
-      #003056 37%,
-      #003056 67%,
+      #021C7F 37%,
+      #021C7F 67%,
       transparent 67%),
     linear-gradient(to right,
       transparent 0%,
       transparent 79%,
-      #04518C 79%,
-      #04518C 100%,
+      #FFED2A 79%,
+      #FFED2A 100%,
       transparent 100%);
 }
 @-webkit-keyframes fancy {
