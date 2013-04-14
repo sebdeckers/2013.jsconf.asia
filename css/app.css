@@ -96,6 +96,7 @@ h2 {
   -moz-perspective: 1500px;
   -ms-perspective: 1500px;
   perspective: 1500px;
+  box-shadow: 0 -10px 40px rgba(7,25,57,0.15);
 }
 #form form {
 	position: absolute;
