@@ -7,6 +7,8 @@ $("#subscribeForm").ajaxForm({
 		$("#form").removeClass("failure success").addClass("load");
 	},
 	success: function(r) {
+		siteReady = false;
+		clearTimeout(hideTimer);
 		if(r.substr(0,6) != "Thanks") {
 			$("#form").removeClass("load").addClass("failure");
 			$("#form .msg").text(r.substr(0,r.indexOf('<br/>')));
@@ -25,6 +27,8 @@ $("#subscribeForm").ajaxForm({
 		}
 	},
 	error: function(r, s) {
+		siteReady = false;
+		clearTimeout(hideTimer);
 		$("#form").removeClass("load").addClass("failure");
 		$("#form .msg").text("Something went utterly wrong...");
 		setTimeout(function() {
@@ -34,15 +38,34 @@ $("#subscribeForm").ajaxForm({
 });
 
 $("#form input").focus(function() {
-	$("#form").addClass("active");
+	clearTimeout(hideTimer);
+	siteReady = false;
 }).blur(function() {
-	$("#form").removeClass("active");
+	siteReady = true;
+	setTimer();
 });
 
 $("#form .msg").click(function() {
 	$("#form").removeClass("failure success");
+	$("#form input[name='email']").focus();
 });
 
+$('body').mousemove(function() {
+	if(!siteReady)
+		return;
+	$(this).addClass("withform");
+	setTimer();
+});
+
+var hideTimer;
+function setTimer() {
+	if(hideTimer != undefined) clearTimeout(hideTimer);
+	hideTimer = setTimeout(function() {
+		$("body").removeClass("withform");
+	}, 3000);
+}
+
 setTimeout(function() {
-	$("#form").fadeIn(1000);
+	siteReady = true;
+	$("#form").css({display: "block"});
 }, 2000);
