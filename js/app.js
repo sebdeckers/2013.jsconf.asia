@@ -20,7 +20,7 @@ $("#subscribeForm").ajaxForm({
 			$("#form .msg").text("Thanks! :)");
 			setTimeout(function() {
 				$("#form input[name='email']").val("");
-				$("#form").removeClass("success");
+				$("#form").removeClass("success active");
 			},2000);
 		}
 	},
@@ -33,6 +33,12 @@ $("#subscribeForm").ajaxForm({
 	}
 });
 
+$("#form input").focus(function() {
+	$("#form").addClass("active");
+}).blur(function() {
+	$("#form").removeClass("active");
+});
+
 $("#form .msg").click(function() {
-	$("#form").removeClass("failure success")
+	$("#form").removeClass("failure success");
 });

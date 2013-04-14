@@ -73,10 +73,10 @@ section {
 h2 {
   position: absolute;
   text-align: center;
-  z-index: 7;
   margin: -15px -100px;
   width: 200px;
   height: 30px;
+  z-index: 10;
   text-transform: uppercase;
   font-size: 20px;
   font-family: 'Open Sans';
@@ -103,6 +103,13 @@ h2 {
 	height: 100%;
 	top: 0;
 	left: 0;
+  opacity: 0.2;
+    filter: alpha(opacity='20'); 
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  transition: all 0.4s linear;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -117,6 +124,10 @@ h2 {
   -o-transition: all 0.4s linear;
   -ms-transition: all 0.4s linear;
   transition: all 0.4s linear;
+}
+#form form:hover, #form.active form, #form.load form, #form.success form, #form.failure form {
+	opacity: 1;
+    filter: alpha(opacity='100'); 
 }
 #form.success form, #form.failure form {
   -webkit-transform: rotateX(180deg);
@@ -143,13 +154,17 @@ h2 {
 	background: #56aaeb;
 	color: #fff;
 	font-size: 15px;
+	border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 #form input[type='submit'] {
 	left: 240px;
 	width: 160px;
-	background: #56aaeb;
+	background: #256BC4;
 	color: #fff;
 	font-size: 15px;
+	cursor: pointer;
 }
 #form .msg {
 	position: absolute;
@@ -160,7 +175,7 @@ h2 {
 	line-height: 40px;
 	font-size: 15px;
 	color: #fff;
-	border: 1px solid #5DB8FF;
+	border: 1px solid #256BC4;
 	text-align: center;
 	cursor: pointer;
   overflow: hidden;
@@ -193,7 +208,7 @@ h2 {
   transform: rotateX(0deg);
 }
 #form input[type='submit']:hover {
-	background: #5DB8FF;
+	background: #2f7fe7;
 }
 #form input[type='submit']:active {
 	line-height: 42px;
@@ -217,18 +232,6 @@ h2 {
 	-o-animation: loading 2s infinite linear;
 	-ms-animation: loading 2s infinite linear;
 	animation: loading 2s infinite linear;
-}
-::-webkit-input-placeholder {
-	color: #ccc;
-}
-:-moz-placeholder {
-	color: #ccc;
-}
-::-moz-placeholder {
-	color: #ccc;
-}
-:-ms-input-placeholder {
-	color: #ccc;
 }
 @-moz-keyframes loading {
   0% {
