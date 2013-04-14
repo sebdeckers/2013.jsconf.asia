@@ -1,32 +1,38 @@
 console.log('Mabuhay! More information coming soon...');
 
 $("#subscribeForm").ajaxForm({
-	url: "./addsubscriber.php",
+	url: "http://jscamp.asia/addsubscriber.php",
 	dataType: "html",
 	beforeSubmit: function() {
-		$("#subscribeForm .msg").slideUp();
-		$("#subscribeForm").removeClass("failure success").addClass("load");
+		$("#form").removeClass("failure success").addClass("load");
 	},
 	success: function(r) {
 		if(r.substr(0,6) != "Thanks") {
-			$("#subscribeForm").removeClass("load").addClass("failure");
-			$("#subscribeForm .msg").text(r.substr(0,r.indexOf('<br/>'))).fadeIn(250);
+			$("#form").removeClass("load").addClass("failure");
+			$("#form .msg").text(r.substr(0,r.indexOf('<br/>')));
+			setTimeout(function() {
+				$("#form").removeClass("failure");
+				$("#form input[name='email']").focus();
+			},5000);
 		}
 		else {
-			$("#subscribeForm").removeClass("load").addClass("success");
-			$("#subscribeForm .msg").text("Thanks! :)").fadeIn(250);
-			_.delay(function() {
-				$("#subscribeForm .msg").slideUp();
-				$("#subscribeForm input[name='email']").val("");
+			$("#form").removeClass("load").addClass("success");
+			$("#form .msg").text("Thanks! :)");
+			setTimeout(function() {
+				$("#form input[name='email']").val("");
+				$("#form").removeClass("success");
 			},2000);
 		}
 	},
 	error: function(r, s) {
-		$("#subscribeForm").removeClass("load").addClass("failure");
-		$("#subscribeForm .msg").text("Something went utterly wrong...").fadeIn(250);
+		$("#form").removeClass("load").addClass("failure");
+		$("#form .msg").text("Something went utterly wrong...");
+		setTimeout(function() {
+			$("#form").removeClass("failure");
+		},5000);
 	}
 });
 
-$("#subscribeForm .msg").click(function() {
-	$("#subscribeForm .msg").slideUp();
+$("#form .msg").click(function() {
+	$("#form").removeClass("failure success")
 });
