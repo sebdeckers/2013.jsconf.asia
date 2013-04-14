@@ -29,7 +29,7 @@ $("#subscribeForm").ajaxForm({
 		$("#form .msg").text("Something went utterly wrong...");
 		setTimeout(function() {
 			$("#form").removeClass("failure");
-		},5000);
+		},4000);
 	}
 });
 
@@ -42,3 +42,7 @@ $("#form input").focus(function() {
 $("#form .msg").click(function() {
 	$("#form").removeClass("failure success");
 });
+
+setTimeout(function() {
+	$("#form").fadeIn(1000);
+}, 2000);

@@ -86,6 +86,7 @@ h2 {
 }
 #form {
   position: absolute;
+  display: none;
   z-index: 8;
   margin: -20px -200px;
   width: 400px;
@@ -120,15 +121,15 @@ h2 {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+#form form:hover, #form.active form, #form.load form, #form.success form, #form.failure form {
+	opacity: 1;
+    filter: alpha(opacity='100');
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   -ms-transition: all 0.4s linear;
   transition: all 0.4s linear;
-}
-#form form:hover, #form.active form, #form.load form, #form.success form, #form.failure form {
-	opacity: 1;
-    filter: alpha(opacity='100'); 
 }
 #form.success form, #form.failure form {
   -webkit-transform: rotateX(180deg);
