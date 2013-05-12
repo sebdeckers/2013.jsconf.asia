@@ -69,3 +69,8 @@ setTimeout(function() {
 	siteReady = true;
 	$("#form").css({display: "block"});
 }, 2000);
+
+setTimeout(function() {
+	$("footer").animate({marginTop: -51}, 500);
+}, 6000);
+

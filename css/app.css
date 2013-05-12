@@ -82,13 +82,8 @@ h2 {
   font-size: 20px;
   font-family: 'Open Sans';
   color: #fff;
-  top: 88%;
+  top: 80%;
   left: 50%;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 .withform h2 {
 	opacity: 0;
@@ -118,7 +113,7 @@ h2 {
   margin: -20px -200px;
   width: 400px;
   height: 40px;
-  top: 88%;
+  top: 80%;
   left: 50%;
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
@@ -261,6 +256,49 @@ border-radius: 0;
 	-ms-animation: loading 2s infinite linear;
 	animation: loading 2s infinite linear;
 }
+
+footer {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: 0 -250px;
+	width: 500px;
+	border: 3px solid white;
+	box-shadow: 0 10px 40px rgba(7,25,57,0.15);
+	height: 48px;
+	background: #d1ebff;
+	z-index: 20;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-size: .9em;
+	border-radius: 5px 5px 0 0;
+	line-height: 3.5em;
+}
+footer a {
+	color: #000;
+	text-decoration: none;
+}
+footer a u {
+	text-decoration: none;
+}
+footer a:hover u {
+	text-decoration: underline;	
+}
+.jscamp {
+	vertical-align: baseline;
+	font-family: 'Courier';
+	color: #38acec;
+	font-size: 1.7em;
+	line-height: 1em;
+	position: relative;
+	top: 1px;
+	padding: 0 10px;
+}
+.yellow {
+	vertical-align: baseline;
+	color: #ffa500;
+}
+
 @-moz-keyframes loading {
   0% {
     background-position: 0 0;
