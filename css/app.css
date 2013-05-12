@@ -260,9 +260,9 @@ border-radius: 0;
 footer {
 	position: absolute;
 	top: 100%;
-	left: 50%;
-	margin: 0 -250px;
-	width: 500px;
+	left: 0px;
+	right: 0px;
+	margin: 0;
 	border: 3px solid white;
 	box-shadow: 0 10px 40px rgba(7,25,57,0.15);
 	height: 48px;
@@ -271,7 +271,6 @@ footer {
 	text-align: center;
 	font-family: 'Open Sans';
 	font-size: .9em;
-	border-radius: 5px 5px 0 0;
 	line-height: 3.5em;
 }
 footer a {
