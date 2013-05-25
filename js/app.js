@@ -24,6 +24,9 @@ $("#subscribeForm").ajaxForm({
 				$("#form input[name='email']").val("");
 				$("#form").removeClass("success active");
 			},2000);
+			setTimeout(function() {
+				window.location = "http://facebook.com/jsconfasia";
+			},2200);
 		}
 	},
 	error: function(r, s) {

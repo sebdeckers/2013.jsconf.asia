@@ -71,19 +71,26 @@ section {
     filter: flipv; opacity:0.20; 
     filter: alpha(opacity='20'); 
 }
-h2 {
+.title {
   position: absolute;
   text-align: center;
-  margin: -15px -100px;
+  margin: -25px -200px;
   z-index: 7;
-  width: 200px;
-  height: 30px;
+  width: 400px;
+  top: 77%;
+  left: 50%;
+}
+.title h2 {
   text-transform: uppercase;
   font-size: 20px;
   font-family: 'Open Sans';
   color: #fff;
-  top: 80%;
-  left: 50%;
+}
+.title a {
+	color: #56AAEB;
+	font-family: 'Open Sans';
+	font-size: 0.9em;
+	text-transform: none;
 }
 .withform h2 {
 	opacity: 0;
@@ -110,10 +117,10 @@ h2 {
   -ms-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
   z-index: 8;
-  margin: -20px -200px;
+  margin: 0px -200px;
   width: 400px;
   height: 40px;
-  top: 80%;
+  top: 77%;
   left: 50%;
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
