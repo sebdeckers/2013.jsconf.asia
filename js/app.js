@@ -77,3 +77,7 @@ setTimeout(function() {
 	$("footer").animate({marginTop: -51}, 500);
 }, 6000);
 
+
+$('#menu').sidr();
+
+
