@@ -77,3 +77,17 @@ setTimeout(function() {
 	$("footer").animate({marginTop: -51}, 500);
 }, 6000);
 
+$('.logo').click(function () {
+	var t = $('#transition').addClass('active out');
+	setTimeout(function() {
+		t.removeClass('out').addClass('in');
+		setTimeout(function() {
+			t.removeClass('in').addClass('out');
+			$('#content, .logo').hide();
+			setTimeout(function () {
+				t.removeClass('active out');
+			}, 1000);
+		}, 1000);
+	}, 10);
+	return false;
+})
